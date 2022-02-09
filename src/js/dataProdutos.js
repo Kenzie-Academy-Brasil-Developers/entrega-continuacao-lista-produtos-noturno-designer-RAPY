@@ -1,11 +1,11 @@
-const produtos = [
-    {
+const produtos = [{
         id: 1,
         nome: 'Banana',
         preco: '2.00',
         secao: 'Hortifruti',
         categoria: 'fruta',
         img: "./src/img/banana.png",
+        lista: 'todos',
         promocao: true,
         precoPromocao: '1.00',
         componentes: [
@@ -13,7 +13,7 @@ const produtos = [
             'Vitamina B6',
             'Vitamina C',
             'Folatos'
-        ] 
+        ]
     },
     {
         id: 2,
@@ -22,6 +22,7 @@ const produtos = [
         secao: 'Hortifruti',
         categoria: 'fruta',
         img: './src/img/morango.png',
+        lista: 'todos',
         promocao: false,
         precoPromocao: '0',
         componentes: [
@@ -29,7 +30,7 @@ const produtos = [
             'Vitamina C',
             'Cálcio',
             'Ferro'
-        ] 
+        ]
     },
     {
         id: 3,
@@ -37,7 +38,8 @@ const produtos = [
         preco: '2.00',
         secao: 'Hortifruti',
         categoria: 'fruta',
-        img: './src/img/maça.png',
+        img: './src/img/maca.png',
+        lista: 'todos',
         promocao: true,
         precoPromocao: '1.50',
         componentes: [
@@ -45,7 +47,7 @@ const produtos = [
             'Vitamina A',
             'Vitamina E',
             'Vitamina C'
-        ] 
+        ]
     },
     {
         id: 4,
@@ -54,6 +56,7 @@ const produtos = [
         secao: 'Panificadora',
         categoria: 'Pães',
         img: './src/img/pao.png',
+        lista: 'todos',
         promocao: true,
         precoPromocao: '2.50',
         componentes: [
@@ -61,7 +64,7 @@ const produtos = [
             'Sódio',
             'Fibra Alimentar',
             'Proteínas'
-        ] 
+        ]
     },
     {
         id: 5,
@@ -70,13 +73,14 @@ const produtos = [
         secao: 'Laticinio',
         categoria: 'Leite',
         img: './src/img/leite.png',
+        lista: 'todos',
         promocao: false,
         precoPromocao: '1.00',
         componentes: [
             'Carboidratos',
             'Proteínas',
             'Gorduras totais'
-        ] 
+        ]
     },
-    
+
 ]
