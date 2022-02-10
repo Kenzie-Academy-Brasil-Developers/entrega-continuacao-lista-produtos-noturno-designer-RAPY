@@ -1,6 +1,13 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    /*background-color: #d3d3d3;*/
+    background-color: #1d1c1c;
+    color: #fff;
+}
+
+header {
+    background-color: #009f5a;
+    height: 50px;
+    margin-top: 15px;
 }
 
 
@@ -10,7 +17,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 30px;
+    padding: 7px;
 }
 
 .estiloGeralBotoes {
@@ -55,12 +62,12 @@ body {
 
 .campoBuscaPorNome {
     border-radius: 5px 0 0 5px;
-    border: 1px solid black;
+    border: 1px solid white;
     padding: 0 10px;
 }
 
 .estiloGeralBotoes--botaoBuscaPorNome {
-    background-color: rgb(17, 17, 20);
+    background-color: #2b36a1;
     color: white;
     border-radius: 0 5px 5px 0;
 }
@@ -89,7 +96,7 @@ main {
 }
 
 .containerListaProdutos ul li:not(ol li) {
-    color: black;
+    color: rgb(255, 255, 255);
     font-weight: bold;
     padding: 20px;
     margin: 10px;
@@ -159,23 +166,15 @@ main {
     font-weight: 600;
 }
 
-
-/*.containerPrecoTotal p span {}*/
-
-.carrosselDestaque {
-    background-color: #fff;
-}
-
-.carrosselDestaque img {
-    max-width: 100%;
-    display: block;
-    margin: 0 auto;
+.containerPrecoTotal p span {
+    color: tomato;
 }
 
 .containerCarrinho {
     width: 450px;
     text-align: center;
     border: 1px solid #ccc;
+    background-color: rgb(44, 41, 41);
 }
 
 .containerCarrinho img {
@@ -192,6 +191,11 @@ main {
     justify-content: space-around;
     align-items: center;
     height: 100px;
+    border: 1px solid #ccc;
+}
+
+.containerCarrinho li:hover {
+    color: #009f5a;
 }
 
 .containerCarrinho li span {
@@ -200,4 +204,31 @@ main {
 
 .containerCarrinho li ol {
     display: none;
+}
+
+
+/*CARROSSEL*/
+
+.carrosselDestaque {
+    background-color: #1d1c1c;
+    width: 800px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 39px;
+    margin-top: 15px;
+}
+
+.carrosselDestaque h1 {
+    font-weight: bold;
+    font-size: 2em;
+    margin-left: 10px;
+    color: #009f5a;
+}
+
+.carrosselDestaque img {
+    max-width: 50%;
+    display: block;
+    margin: 0 auto;
 }
