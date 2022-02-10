@@ -140,30 +140,19 @@ botaoMostrarHortifruti.addEventListener('click', filtrarPorHortifruti);
 const input = document.querySelector(".campoBuscaPorNome")
 
 const campoBuscaPorNome = () => {
-
-    const buscaPorNome = produtos.filter((produto) =>
-        produto.nome.toLowerCase()
-        .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, '')
-        .startsWith(input.value
-            .toLowerCase()
-            .normalize('NFD')
-            .replace(/[\u0300-\u036f]/g, '')))
+    const inputValue = input.value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    const buscaPorNome = produtos.filter((produto) => {
+        const { nome, secao, categoria } = produto;
+        if (nome.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').startsWith(inputValue) ||
+            secao.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').startsWith(inputValue) ||
+            categoria.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').startsWith(inputValue)) {
+            return produtos;
+        }
+        console.log(inputValue)
+    });
 
     montarListaProdutos(buscaPorNome);
-
-
-
 }
-
-
-// ----------------- REMOVE FORMATAÇÃO DE ACENTOS ------------
-const formata = produto => {
-    produto = produto.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-    return produto;
-}
-
-
 
 // Selecionando botao em nosso HTML
 const botaoBuscaPorNome = document.querySelector('.estiloGeralBotoes--botaoBuscaPorNome');
@@ -207,3 +196,31 @@ const botaoMostrarPanificadora = document.querySelector('.estiloGeralBotoes--fil
 
 // Adicionando event listener de clique, e executando a função de filtro
 botaoMostrarPanificadora.addEventListener('click', filtrarPorPanificadora);
+
+
+
+//  CARROSSEL DE IMAGENS  //
+
+const arrayImagens = [
+    "./src/img/carrossel/1.jpg",
+    "./src/img/carrossel/2.jpg",
+    "./src/img/carrossel/3.jpg",
+]
+const img = document.querySelector(".carrosselDestaque img")
+
+function carrosselDestaque(imagens, img, valorTempo) {
+
+    let cont = 0
+    const tempo = setInterval(function() {
+
+        if (cont < arrayImagens.length) {
+            img.src = imagens[cont]
+            cont++
+        } else {
+            cont = 0
+        }
+
+    }, valorTempo)
+
+}
+carrosselDestaque(arrayImagens, img, 2000)
